@@ -1,3 +1,7 @@
+function toggleDropDown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
