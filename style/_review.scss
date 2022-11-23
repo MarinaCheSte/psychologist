@@ -1,0 +1,21 @@
+.review-link {
+	border-bottom: solid #3e2723 3px;
+}
+
+.review-link:hover {
+	color: #3e2723;
+}
+
+.review-text {
+	font-size: 20px;
+	font-weight: 900;
+	padding: 30px;
+	line-height: 2;
+}
+
+.review-wrapper {
+	background-color: #efebe9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
