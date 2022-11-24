@@ -24,6 +24,7 @@ a {
   background-color: rgba(255, 255, 255, 0.6);
   font-weight: bold;
   width: 100vw;
+  font-size: 18px;
 }
 
 .wrapper {
@@ -76,6 +77,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -85,10 +87,6 @@ a {
   list-style-type: none;
   margin-right: 40px;
   cursor: pointer;
-}
-
-.navigation__elem:hover {
-  border-bottom: solid #d7ccc8 2px;
 }
 
 .navigation__elem:hover {
@@ -180,7 +178,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation-direction: reverse;
+}
+@media (max-width: 1000px) {
+  .intro-info {
+    width: 90vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 .intro-foto {
@@ -193,6 +198,10 @@ a {
 @media (max-width: 1000px) {
   .intro-foto {
     width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 30px;
     align-items: center;
     justify-content: center;
   }
@@ -243,9 +252,14 @@ a {
   margin: 15px;
   font-size: 55px;
 }
+@media (max-width: 1000px) {
+  .intro-headline {
+    align-self: center;
+  }
+}
 @media (max-width: 600px) {
   .intro-headline {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -260,13 +274,18 @@ a {
 }
 @media (max-width: 600px) {
   .intro-text {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
 .buttons-wrapper {
   display: flex;
   flex-direction: row;
+}
+@media (max-width: 1000px) {
+  .buttons-wrapper {
+    justify-content: center;
+  }
 }
 
 .button {
@@ -285,13 +304,14 @@ a {
   .button {
     width: 250px;
     height: 60px;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 600px) {
   .button {
     width: 200px;
     height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 450px) {
@@ -309,29 +329,32 @@ a {
   margin-top: 80px;
   background-color: rgba(215, 204, 200, 0.7);
 }
+@media (max-width: 1000px) {
+  .button-left {
+    margin-top: 30px;
+  }
+}
 
 .button-right {
   background-color: rgb(255, 255, 255);
   margin-top: 80px;
   border: solid rgba(215, 204, 200, 0.7) 2px;
 }
+@media (max-width: 1000px) {
+  .button-right {
+    margin-top: 30px;
+  }
+}
 
 .button-right:hover {
   background-color: rgba(215, 204, 200, 0.7);
+  border: solid rgb(255, 255, 255) 2px;
 }
 
 .button-left:hover {
   background-color: rgb(255, 255, 255);
   color: #3e2723;
   border: solid rgba(215, 204, 200, 0.7) 2px;
-}
-
-.aboutfoto-wrapper {
-  background-image: url(./images/IMG_9779_edited2.jpeg);
-  background-size: cover;
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
 }
 
 .about-section {
@@ -343,7 +366,7 @@ a {
 }
 
 .absolute-image {
-  background-image: url(./images/colored_flower.jpg);
+  background-image: url(../images/colored_flower.jpg);
   background-size: cover;
   position: absolute;
   width: 300px;
@@ -385,6 +408,11 @@ a {
   align-items: center;
   margin: 15px;
   width: 80%;
+}
+@media (max-width: 600px) {
+  .about-info {
+    width: 90vw;
+  }
 }
 
 .about-headline {
@@ -512,7 +540,7 @@ a {
 }
 
 .additional-foto {
-  background: url(./images/IMG_9779_edited2.jpeg);
+  background: url(../images/IMG_9779_edited2.jpeg);
   background-size: cover;
   width: 250px;
   height: 250px;
@@ -573,7 +601,7 @@ a {
 }
 
 .absolute-image3 {
-  background-image: url(./images/roses_img.jpg);
+  background-image: url(../images/roses_img.jpg);
   background-size: cover;
   position: absolute;
   width: 250px;
@@ -623,7 +651,6 @@ a {
   max-height: 400px;
 }
 
-/* Slideshow container */
 .slideshow-container {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -633,12 +660,10 @@ a {
   padding-top: 50px;
 }
 
-/* Hide the images by default */
-.mySlides {
+.slides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -659,7 +684,6 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -669,14 +693,12 @@ a {
   left: 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgb(0, 0, 0);
 }
 
-/* The dots/bullets/indicators */
-.dot {
+.circle {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -687,13 +709,16 @@ a {
   transition: background-color 0.6s ease;
 }
 
+.circles-wrapper {
+  text-align: center;
+}
+
 .active,
 .dot:hover {
   background-color: #717171;
 }
 
-/* Fading animation */
-.fade {
+.effect {
   -webkit-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -702,7 +727,7 @@ a {
 
 @-webkit-keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -711,14 +736,14 @@ a {
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
   }
 }
 .contact-section {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .contact-wrapper {
@@ -765,6 +790,7 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  font-size: 18px;
 }
 @media (max-width: 500px) {
   .footer-section {
@@ -784,6 +810,7 @@ a {
 .footer-navigation {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   /*justify-content: flex-end;*/
   line-height: 2;
   font-weight: 900;

@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "style":"sass --watch index.scss index.css"
-
+    "style": "sass --watch index.scss index.css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MarinaCheSte/psychologist/issues"
   },
-  "homepage": "https://github.com/MarinaCheSte/psychologist#readme"
+  "homepage": "https://github.com/MarinaCheSte/psychologist#readme",
+  "devDependencies": {
+    "prettier": "2.8.0"
+  }
 }

@@ -1,106 +1,102 @@
 .gallery-section {
-	height: fit-content;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	padding-bottom: 30px;
-	background-color: rgb(255, 255, 255);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 30px;
+  background-color: $light-color;
 }
 
-
 .gallery-wrapper {
-	border-top: solid #d7ccc8 3px;
-	border-bottom: solid #d7ccc8 3px;
-	padding-bottom: 30px;
+  border-top: solid $secondary-color 3px;
+  border-bottom: solid #d7ccc8 3px;
+  padding-bottom: 30px;
 }
 
 .gallery-headline {
-	font-size: 30px;
-	font-weight: bolder;
-	padding-top: 80px;
+  font-size: 30px;
+  font-weight: bolder;
+  padding-top: 80px;
 }
 
 .gallery-image {
-	max-width: 100%;
-	max-height: 400px;
+  max-width: 100%;
+  max-height: 400px;
 }
 
-/* Slideshow container */
 .slideshow-container {
-	max-width: fit-content;
-	position: relative;
-	margin: auto;
-	padding-top: 50px;
+  max-width: fit-content;
+  position: relative;
+  margin: auto;
+  padding-top: 50px;
 }
 
-/* Hide the images by default */
-.mySlides {
-	display: none;
+.slides {
+  display: none;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	margin-top: -22px;
-	padding: 16px;
-	color: white;
-	font-weight: bold;
-	font-size: 18px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-	background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: $light-color;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: $gallery-button-color;
 }
 
-/* Position the "next button" to the right */
 .next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .prev {
-	left: 0;
+  left: 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-	background-color: rgba(0, 0, 0, 1);
+  background-color: $gallery-button-hover;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-	cursor: pointer;
-	height: 15px;
-	width: 15px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
+.circle {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: $light-color;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.circles-wrapper {
+  text-align: center;
 }
 
 .active,
-.dot:hover {
-	background-color: #717171;
+.circle:hover {
+  background-color: $dot-color;
 }
 
-/* Fading animation */
-.fade {
-	animation-name: fade;
-	animation-duration: 1.5s;
+.effect {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
-	from {
-		opacity: .4
-	}
+  from {
+    opacity: 0.5;
+  }
 
-	to {
-		opacity: 1
-	}
+  to {
+    opacity: 1;
+  }
 }
