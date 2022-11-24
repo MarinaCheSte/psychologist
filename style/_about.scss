@@ -57,8 +57,18 @@
   font-weight: bolder;
   font-size: 18px;
   margin: 15px;
+  overflow: hidden;
 }
 
-.spacediv {
-  height: 18px;
+._animated-text {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.4s ease 0s;
+}
+
+._active._animated-text,
+._animated-text._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 0.4s ease 0s;
 }

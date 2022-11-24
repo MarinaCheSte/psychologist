@@ -1,30 +1,86 @@
+// toggle mobile navigation
+
 function toggleDropDown() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
+
+// image gallery handler
 
 let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slides");
   let dots = document.getElementsByClassName("circle");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+// Animation
+
+const animatedElems = document.querySelectorAll(".animated");
+
+if (animatedElems.length > 0) {
+  window.addEventListener("scroll", animateOnScroll);
+
+  function animateOnScroll() {
+    for (let i = 0; i < animatedElems.length; i++) {
+      const animatedElem = animatedElems[i];
+      const animatedElemHeight = animatedElem.offsetHeight;
+      const animatedElemOffset = offset(animatedElem).top;
+      const animationStart = 10;
+
+      let animatedElemPoint =
+        window.innerHeight - animatedElemHeight / animationStart;
+
+      if (animatedElemHeight > window.innerHeight) {
+        animatedElemPoint =
+          window.innerHeight - window.innerHeight / animationStart;
+      }
+      if (
+        scrollY > animatedElemOffset - animatedElemPoint &&
+        scrollY < animatedElemOffset + animatedElemHeight
+      ) {
+        animatedElem.classList.add("_active");
+      } else {
+        if (!animatedElem.classList.contains("animation-off")) {
+          animatedElem.classList.remove("_active");
+        }
+      }
+    }
+  }
+
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+      scrollLeft = window.scrollY || document.documentElement.scrollLeft,
+      scrollTop = window.scrollY || document.documentElement.scrollTop;
+    return {
+      top: rect.top + scrollTop,
+      left: rect.left + scrollLeft,
+    };
+  }
+  setTimeout(() => {
+    animateOnScroll();
+  }, 300);
 }
