@@ -398,7 +398,7 @@ a {
 }
 
 .absolute-image {
-  background-image: url(../images/colored_flower.jpg);
+  background-image: url(../../psychologist/images/colored_flower.jpg);
   background-size: cover;
   position: absolute;
   width: 300px;
@@ -602,7 +602,7 @@ a {
 }
 
 .additional-foto {
-  background: url(../images/IMG_9779_edited2.jpeg);
+  background: url(../../psychologist/images/IMG_9779_edited2.jpeg);
   background-size: cover;
   width: 250px;
   height: 250px;
@@ -663,7 +663,7 @@ a {
 }
 
 .absolute-image3 {
-  background-image: url(../images/roses_img.jpg);
+  background-image: url(../../psychologist/images/roses_img.jpg);
   background-size: cover;
   position: absolute;
   width: 250px;
