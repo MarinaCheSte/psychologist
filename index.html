@@ -1,12 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/normalize.css" />
+    <title>Наталья Зуёнок - психолог</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper wrapper-header">
+        <a class="logo" href="/index.html"
+          ><img
+            class="logo-image"
+            src="/images/iconmonstr-home-thin-240.png"
+            alt="photo"
+        /></a>
+
+        <div class="navigation-mobile">
+          <div class="navigation-lines" onclick="toggleDropDown()">
+            <div class="navigation-line"></div>
+            <div class="navigation-line"></div>
+            <div class="navigation-line"></div>
+          </div>
+
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#aboutme" class="dropdown__a" onclick="toggleDropDown()"
+              >Обо мне</a
+            >
+            <a href="#workformat" class="dropdown__a" onclick="toggleDropDown()"
+              >Форматы работы</a
+            >
+            <a href="#education" class="dropdown__a" onclick="toggleDropDown()"
+              >Образование</a
+            >
+            <a href="#contact" class="dropdown__a" onclick="toggleDropDown()"
+              >Контакты</a
+            >
+          </div>
+        </div>
+
+        <nav class="header__navigation">
+          <div class="navigation">
+            <a class="navigation__elem" href="#aboutme">Обо мне</a>
+            <a class="navigation__elem" href="#workformat">Форматы работы</a>
+            <a class="navigation__elem" href="#education">Образование</a>
+            <a class="navigation__elem" href="#contact">Контакты</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="section">
+      <div class="wrapper section-wrapper">
+        <div class="two-column">
+          <div class="intro-info">
+            <div class="intro-wrapper">
+              <h3 class="intro-headline animated animation-off">Наталья Зуёнок</h3>
+              <div class="intro-text animated animation-off">
+                Медицинский психолог, специалист по расстройствам пищевого
+                поведения.<br />
+                Работаю в подходе с доказанной эффективностью <br />(КБТ-У К.
+                Фейрнберна).
+              </div>
+              <div class="buttons-wrapper">
+                <a class="button button-left animated animation-off" href="#workformat">Услуги</a>
+                <a class="button button-right animated animation-off" href="#contact">Запись</a>
+              </div>
+            </div>
+          </div>
+          <div class="intro-foto"><div class="foto-wrapper animated animation-off "></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section">
+      <a name="aboutme"></a>
+      <div class="wrapper about-wrapper">
+        <div class="about-info">
+          <h2 class="about-headline">Обо мне</h2>
+          <div class="about-text">
+            <p >Я медицинский психолог (закончила Белорусский государственный
+            университет, ФФСН, Кафедра психологии). Это моё второе высшее
+            образование.</p>
+           <p class="_animated-text animated animation-off ">Работаю в когнитивно-поведенческом подходе (ИПМП Б.Д. Карвасарского,
+            г. Санкт-Петербург, 144 ак.ч.). </p> 
+            <p class="_animated-text animated animation-off ">Являюсь действующим членом Ассоциации когнитивно-поведенческой
+            терапии.</p>
+            <p class="_animated-text animated animation-off ">Специализируюсь на расстройствах пищевого поведения.</p>
+            <p class="_animated-text animated animation-off ">Первое высшее образование у меня медико-биологические, что позволяет
+            мне очень глубоко подходить к решению вопросов пищевого поведения.
+            Потому что в случае таких расстройств мы зачастую сталкиваемся с
+            какими-то изменениями или даже заболеваниями, которые стали либо
+            результатов РПП, либо являются сопутствующим им заболеваниями.</p>
+            <p class="_animated-text animated animation-off">  У меня у самой было расстройство пищевого поведения, в неклинической
+            форме, с которым я благополучно справилась. </p>
+          
+            <p class="_animated-text animated animation-off">Мой личный опыт помогает мне понимать людей с РПП на личном уровне,
+            представлять их эмоции, переживания, знать их ход мыслей, что,
+            безусловно помогает в эффективности терапии. </p>
+         
+           <p class="_animated-text animated animation-off"> Провела больше 1000 часов личных и онлайн консультаций. Меня очень
+            радуют и вдохновляют успехи моих клиентов, многочисленные отзывы я
+            стимулируют меня развиваться, учиться, чтобы быть максимально
+            эффективной. </p>
+      
+            <p class="_animated-text animated animation-off">Здесь вы можете подробнее узнать о моем подходе и возможностях
+            совместной работы. </p>
+    
+           <p class="_animated-text animated animation-off"> Буду рада быть вам полезной.</p>
+          </div>
+        </div>
+        <div class="absolute-image"></div>
+      </div>
+    </section>
+    <section class="section kpt-section">
+      <div class="wrapper kpt-wrapper">
+        <div class="kpt-info">
+          <h2 class="kpt-headline">Почему именно КПТ?</h2>
+          <div class="kpt-text animated animation-off">
+            Et harum quidem rerum facilis est et expedita distinctio,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. At vero eos et accusamus et iusto
+            odio dignissimos ducimus, qui in ea voluptate velit esse, quam nihil
+            molestiae consequatur, vel illum, facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Lorem ipsum dolor sit amet,
+            qui in ea voluptate velit esse, quam nihil molestiae consequatur,
+            vel illum, qui dolorem ipsum, quia dolor sit, amet, consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt, ut
+            labore et dolore magnam aliquam quaerat voluptatem! Itaque earum
+            rerum...
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute-image2"></div>
+    </section>
+
+    <a name="workformat"></a>
+    <section class="section workformat-section">
+      <div class="wrapper workformat-wrapper">
+        <h2 class="workformat-headline">Форматы работы</h2>
+        <div class="two-column two-column-workformat">
+          <div class="workformat__format">
+            <div class="headline-wrapper">
+              <h2 class="format-headline">
+                Разовая (она же первичная) консультация.
+              </h2>
+            </div>
+            <div class="format-text">
+              <p >
+                Проводится по видеосвязи в Скайп, Зум, Телеграм, Вайбер или
+                Вотсап
+              </p>
+              <p class="_animated-text animated animation-off" >
+                На ней вы рассказываете вашу ситуацию, я задаю уточняющие
+                вопросы. Общаемся с вами достаточно долго для того, чтобы
+                прояснить, что с вами происходит (перед встречей я вам отправляю
+                диагностический опросник, который поможет нам в понимании вашего
+                случая.
+              </p>
+              <p class="_animated-text animated animation-off">
+                В результате консультации я даю вам рекомендации по
+                восстановлению пищевого поведения, которые вы в дальнейшем
+                выполняете самостоятельно (в лёгких случаях это возможно) либо
+                приходите ко мне на следующие (повторные) консультации и мы с
+                вами работаем вместе до решения вашего вопроса (количество
+                консультаций зависит от вашего случая).
+              </p>
+              <p class="_animated-text animated animation-off">
+                <u>
+                  Длительность разовой (первичной) консультации - 1 час 30
+                  минут</u
+                >
+              </p>
+              <p class="_animated-text animated animation-off"><u>Длительность повторной консультации - 50 минут.</u></p>
+              <p class="_animated-text animated animation-off">
+                <u
+                  >Стоимость разовой (первичной) консультации - 150 BYN (или
+                  4500 RUR)</u
+                >
+              </p>
+              <p class="_animated-text animated animation-off">
+                <u
+                  >Стоимость повторной консультации - 130 BYN (или 4000 RUR).</u
+                >
+              </p>
+            </div>
+          </div>
+          <div class="workformat__format">
+            <div class="headline-wrapper">
+              <h2 class="format-headline">Пакет консультаций</h2>
+            </div>
+            <div class="format-text">
+              <p>
+                Можно приобрести сразу пакет консультаций по более выгодной
+                цене:
+              </p>
+              <p class="_animated-text animated animation-off"><u>Пакет из 5 консультаций: 500 BYN (или 17 000 RUR)</u></p>
+              <p class="_animated-text animated animation-off"><u>Пакет из 10 консультаций: 850 BYN (или 30 000 RUR)</u></p>
+            </div>
+          </div>
+
+          <section class="review-section">
+            <div class="wrapper review-wrapper">
+              <div class="review-text">
+                <a
+                  href="https://www.instagram.com/stories/highlights/17905525210777157/"
+                  class="review-link"
+                  >Отзывы клиентов можно увидеть тут</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section additional-section">
+      <div class="wrapper additional-wrapper">
+        <div class="additionalfoto-wrapper">
+          <div class="additional-foto"></div>
+        </div>
+        <div class="line"></div>
+        <h3 class="additional-headline">Сколько необходимо консультаций?</h3>
+        <div class="additional-text">
+          <p class="_animated-text animated animation-off">
+            В более лёгких (неклинических случаях) может быть достаточно 5
+            консультаций!
+          </p>
+          <p class="_animated-text animated animation-off">Чаще всего необходимо 10 консультаций!</p>
+          <p class="_animated-text animated animation-off">
+            Классический протокол КБТ-У К. Фейрнберна, по которому я работаю,
+            предполагает - 20 консультаций (это для классического диагноза
+            нервной анорексии, булимии или приступообразного переедания).
+          </p>
+          <p class="_animated-text animated animation-off">
+            При наличии сопутствующих проблем возможно расширение протокола до
+            40 консультаций.
+          </p>
+        </div>
+        <div class="line"></div>
+      </div>
+      <div class="absolute-image3"></div>
+    </section>
+
+    <a name="education"></a>
+    <section class="section gallery-section">
+      <div class="wrapper gallery-wrapper">
+        <div class="gallery-headline">Мои дипломы и сертификаты</div>
+
+        <div class="slideshow-container">
+          <div class="slides effect">
+            <img class="gallery-image" src="./images/cert_4.PNG" alt="photo" />
+          </div>
+
+          <div class="slides effect">
+            <img
+              class="gallery-image"
+              src="./images/education_psy.jpeg"
+              alt="photo"
+            />
+          </div>
+
+          <div class="slides effect">
+            <img
+              class="gallery-image"
+              src="./images/education_psy2.jpeg"
+              alt="photo"
+            />
+          </div>
+
+          <div class="slides effect">
+            <img
+              class="gallery-image"
+              src="./images/education_first.jpeg"
+              alt="photo"
+            />
+          </div>
+
+          <div class="slides effect">
+            <img class="gallery-image" src="./images/cert_1.JPG" alt="photo" />
+          </div>
+
+          <div class="slides effect">
+            <img class="gallery-image" src="./images/cert_2.jpeg" alt="photo" />
+          </div>
+
+          <div class="slides effect">
+            <img class="gallery-image" src="./images/cert_3.jpeg" alt="photo" />
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <div class="circles-wrapper">
+          <span class="circle" onclick="currentSlide(1)"></span>
+          <span class="circle" onclick="currentSlide(2)"></span>
+          <span class="circle" onclick="currentSlide(3)"></span>
+          <span class="circle" onclick="currentSlide(4)"></span>
+          <span class="circle" onclick="currentSlide(5)"></span>
+          <span class="circle" onclick="currentSlide(6)"></span>
+          <span class="circle" onclick="currentSlide(7)"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <a name="contact"></a>
+      <div class="wrapper contact-wrapper">
+        <div class="line"></div>
+        <h3 class="contact-headline">Контакты</h3>
+        <div class="contact-text">WhatsApp: + 375 33 902 36 76</div>
+        <div class="contact-text">natalya_zuenok@mail.ru</div>
+        <div class="line"></div>
+      </div>
+    </section>
+
+    <footer class="section footer-section">
+      <div class="wrapper footer-wrapper">
+        <div class="navigation footer-navigation">
+          <a class="navigation__elem" href="#aboutme">Обо мне</a>
+          <a class="navigation__elem" href="#workformat">Форматы работы</a>
+          <a class="navigation__elem" href="#education">Образование</a>
+          <a class="navigation__elem" href="#contact">Контакты</a>
+        </div>
+
+        <div class="footer-contact">
+          <div class="footer-text">WhatsApp: + 375 33 902 36 76</div>
+          <div class="footer-text">natalya_zuenok@mail.ru</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/index.js"></script>
+  </body>
 </html>
