@@ -1,9 +1,13 @@
 .additional-foto {
-  background: url(../../psychologist/images/IMG_9779_edited2.jpeg);
+  background: url(./images/foto_new2.jpeg);
   background-size: cover;
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  @media (max-width: 350px) {
+  width: 200px;
+  height: 200px;
+  }
 }
 
 .line {
@@ -43,6 +47,9 @@
   font-size: 30px;
   font-weight: bolder;
   margin: 0;
+  @media (max-width: 280px) {
+    font-size: 26px;
+  }
 }
 
 .additional-text {
@@ -58,7 +65,7 @@
 }
 
 .absolute-image3 {
-  background-image: url(../../psychologist/images/roses_img.jpg);
+  background-image: url(./images/roses_img.jpg);
   background-size: cover;
 
   position: absolute;

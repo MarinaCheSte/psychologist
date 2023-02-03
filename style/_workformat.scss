@@ -14,6 +14,9 @@
 .workformat-headline {
   font-size: 30px;
   padding-bottom: 30px;
+  @media (max-width: 280px) {
+    font-size: 26px;
+  }
 }
 
 .workformat__format {

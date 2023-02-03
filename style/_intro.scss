@@ -42,13 +42,16 @@
     align-items: center;
     justify-content: center;
   }
+  @media (max-width: 320px) {
+    width: 95%;
+  }
 }
 
 .foto-wrapper {
-  background-image: url(./images/IMG_5634.jpeg);
+  background-image: url(/images/foto_new1.jpeg);
   background-size: cover;
-  width: 500px;
-  height: 500px;
+  width: 580px;
+  height: 580px;
   position: relative;
   border-radius: 50%;
   display: flex;
@@ -72,8 +75,12 @@
   }
 
   @media (max-width: 400px) {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+  }
+  @media (max-width: 320px) {
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -103,6 +110,10 @@
     margin-bottom: 0;
     margin-top: 0;
   }
+
+  @media (max-width: 280px) {
+    font-size: 26px;
+  }
 }
 
 .intro-headline._active {
@@ -121,6 +132,10 @@
   transition: all 0.8s ease 0s;
   @media (max-width: 600px) {
     font-size: 18px;
+  }
+
+  @media (max-width: 280px) {
+    font-size: 16px;
   }
 }
 
@@ -168,6 +183,11 @@
     width: 150px;
     height: 50px;
   }
+
+  @media (max-width: 350px) {
+    width: 110px;
+    height: 40px;
+  }
 }
 
 .button._active {
@@ -178,6 +198,10 @@
 
 .button-left {
   margin-right: 20px;
+
+  @media (max-width: 350px) {
+    margin-right: 5px;
+  }
 }
 
 .button-left {

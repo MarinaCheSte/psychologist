@@ -125,4 +125,7 @@
   height: 4px;
   background-color: $line-color;
   margin: 8px 0 8px 0;
+  @media (max-width: 560px) {
+    width: 55px;
+  }
 }
