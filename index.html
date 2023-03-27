@@ -49,7 +49,7 @@
               <br />(КБТ-У К. Фейрнберна). </div>
             <div class="buttons-wrapper">
               <a class="button button-left animated animation-off" href="#workformat">Услуги</a>
-              <a class="button button-right animated animation-off" href="#form">Запись</a>
+              <a class="button button-right animated animation-off" href="#form_contact">Запись</a>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
       <div class="absolute-image"></div>
     </div>
   </section>
-  <section class="section kpt-section">
+  <!-- <section class="section kpt-section">
     <div class="wrapper kpt-wrapper">
       <div class="kpt-info">
         <h2 class="kpt-headline">Почему именно КПТ?</h2>
@@ -109,7 +109,7 @@
       </div>
     </div>
     <div class="absolute-image2"></div>
-  </section>
+  </section>-->
   <a name="workformat"></a>
   <section class="section workformat-section">
     <div class="wrapper workformat-wrapper">
@@ -124,7 +124,7 @@
             <p class="_animated-text animated animation-off"> На ней вы рассказываете вашу ситуацию,
               я задаю уточняющие вопросы. Общаемся с вами достаточно долго для того, чтобы
               прояснить, что с вами происходит (перед встречей я вам отправляю диагностический
-              опросник, который поможет нам в понимании вашего случая. </p>
+              опросник, который поможет нам в понимании вашего случая). </p>
             <p class="_animated-text animated animation-off"> В результате консультации я даю вам
               рекомендации по восстановлению пищевого поведения, которые вы в дальнейшем выполняете
               самостоятельно (в лёгких случаях это возможно) либо приходите ко мне на следующие
@@ -238,15 +238,15 @@
       </div>
     </div>
   </section>
-  <a name="form"></a>
+  <a name="form_contact"></a>
   <section class="section form-section">
     <div class="wrapper form-wrapper">
-      <h2 class="form__headline">Записатьcя на прием</h2>
-      <form action="/" method="post">
+      <h2 class="form__headline">Записатьcя на консультацию</h2>
+      <form action="#" method="post" id="form">
         <div>
           <p class="form__input-name"><label for="name">Имя</label></p>
           <p class="form__input-name"><input type="text" id="name" name="user_name"
-                   class="form-input"></p>
+                   class="form-input _required"></p>
         </div>
         <div>
           <p class="form__input-name"><label for="surname">Фамилия</label></p>
@@ -255,18 +255,19 @@
         </div>
         <div>
           <p class="form__input-name"><label for="mail">E-mail:</label></p>
-          <p class="form__input-name"><input type="email" id="mail" name="user_email"
-                   class="form-input"></p>
+          <p class="form__input-name"><input id="mail" name="user_email"
+                   class="form-input _required _email"></p>
         </div>
         <div>
           <p class="form__input-name"><label for="tel">Телефон:</label></p>
-          <p class="form__input-name"><input type="tel" id="tel" name="user_tel" class="form-input">
+          <p class="form__input-name"><input type="tel" id="tel" name="user_tel"
+                   class="form-input _required">
           </p>
         </div>
         <div>
           <p class="form__input-name"><label for="msg">Запрос</label></p>
           <p class="form__input-name"><textarea id="msg" name="user_message"
-                      class="form-input  form-input_text"></textarea>
+                      class="form-input  form-input_text _required"></textarea>
           </p>
         </div>
         <div>

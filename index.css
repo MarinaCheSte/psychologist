@@ -78,7 +78,6 @@ a {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -157,7 +156,6 @@ a {
 
 .section {
   background-color: #efebe9;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -187,7 +185,6 @@ a {
 @media (max-width: 1000px) {
   .intro-info {
     width: 90vw;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -203,7 +200,6 @@ a {
 @media (max-width: 1000px) {
   .intro-foto {
     width: 90%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding-bottom: 30px;
@@ -427,7 +423,6 @@ a {
 }
 
 .about-section {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
@@ -469,6 +464,7 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 50px 0 50px 0;
+  border-bottom: solid #efebe9 5px;
 }
 
 .about-info {
@@ -561,7 +557,6 @@ a {
 
 .workformat-section {
   background-color: rgb(255, 255, 255);
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding-top: 80px;
@@ -744,7 +739,6 @@ a {
 }
 
 .gallery-section {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -777,7 +771,6 @@ a {
 }
 
 .slideshow-container {
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   position: relative;
@@ -804,7 +797,6 @@ a {
   border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -844,19 +836,8 @@ a {
 }
 
 .effect {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
@@ -871,10 +852,18 @@ a {
   border: solid #efebe9 2px;
 }
 
+form * {
+  outline: none;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 20px #d7ccc8;
+}
+
 .form-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
@@ -900,11 +889,29 @@ a {
   }
 }
 
-@media (max-width: 350px) {
+.form-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5) url(../images/loading4.gif) center/80px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.form-wrapper._sending::after {
+  opacity: 1;
+  visibility: hidden;
+}
+
+@media (max-width: 470px) {
   .form__headline {
     margin: 5px;
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: center;
   }
 }
 
@@ -925,6 +932,8 @@ a {
   cursor: pointer;
   border-radius: 30px;
   border: solid rgb(255, 255, 255) 2px;
+  position: relative;
+  top: 0;
 }
 @media (max-width: 420px) {
   .button-form {
@@ -945,6 +954,11 @@ a {
 .button-form:hover {
   background-color: rgb(255, 255, 255);
   border: solid rgba(215, 204, 200, 0.7) 2px;
+}
+
+.button-form:active {
+  top: 3px;
+  background-color: rgba(215, 204, 200, 0.7);
 }
 
 .form-input {
@@ -970,7 +984,11 @@ a {
 }
 
 .form-input_text {
-  height: 60px;
+  height: 100px;
+}
+
+._error {
+  box-shadow: 0 0 15px red;
 }
 
 .contact-section {
@@ -1028,7 +1046,6 @@ a {
 
 .footer-section {
   background-color: #efebe9;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   font-size: 18px;

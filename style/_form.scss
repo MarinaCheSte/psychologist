@@ -2,7 +2,16 @@
   border: solid $primary-color 2px;
 }
 
+form *{
+  outline: none;
+}
+
+.form-input:focus{
+box-shadow: 0 0 20px $secondary-color;
+}
+
 .form-wrapper{
+  position:relative;
     display:flex;
     flex-direction: column;
     height: fit-content;
@@ -23,11 +32,30 @@
      }
 }
 
+.form-wrapper::after{
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5) url(../images/loading4.gif) center/80px no-repeat;
+  opacity:0;
+  visibility: hidden;
+}
+
+.form-wrapper._sending::after{
+  opacity: 1;
+  visibility:hidden;
+}
+
+
 .form__headline{
-  @media (max-width: 350px) {
+  @media (max-width: 470px) {
    margin: 5px;
    font-size: 20px;
    margin-bottom: 10px;
+   text-align: center;
    }
 }
 
@@ -48,6 +76,8 @@
     cursor: pointer;
     border-radius: 30px;
     border: solid $light-color 2px;
+    position: relative;
+    top:0;
     @media (max-width: 420px) {
       width:300px;
      }
@@ -62,6 +92,11 @@
   .button-form:hover {
     background-color: $light-color;
     border: solid $button-color 2px;
+  }
+
+  .button-form:active{
+    top:3px;
+    background-color: $button-color;
   }
 
   .form-input{
@@ -82,5 +117,9 @@
   }
 
   .form-input_text{
-    height: 60px;
+    height: 100px;
+  }
+
+  ._error{
+    box-shadow: 0 0 15px red;
   }
