@@ -84,3 +84,79 @@ if (animatedElems.length > 0) {
     animateOnScroll();
   }, 300);
 }
+
+/*form handler*/
+
+document.addEventListener('DOMContentLoaded',
+function(){
+  const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  const form=document.getElementById('form');
+  form.addEventListener('submit', formSend);
+
+  async function formSend(e){
+    e.preventDefault();
+    let error=formValidate(form);
+
+    let formData=new FormData(form);
+
+    if(error===0){
+      form.classList.add('_sending');
+      let response=await fetch('send.php', {
+        method:'POST',
+        body:formData
+      });
+      if(response.ok){
+        let result=await response.json();
+        alert(result.message);
+        formPreview.innerHTML="";
+        form.reset();
+form.classList.remove('_sending');
+      }else{
+alert("Ошибка!");
+form.classList.remove("_sending");
+      }
+
+    } else {
+      alert("Заполните обязательные поля")
+    }
+  }
+
+function formValidate(form){
+let error=0;
+let formRequired=document.querySelectorAll("._required");
+
+for (let i=0; i<formRequired.length; i++){
+  const input=formRequest[i];
+  formRemoveError(input);
+
+
+  if (input.classList.contains("_email")){
+    if(emailCheck(input)){
+      formAddError(input);
+      error++;
+    } else{
+      if(input.value===""){
+        formAddError(input);
+        error++;
+      }
+    }
+  }
+}
+}
+
+function formAddError(input){
+  input.parentElement.classList.add("_error");
+  input.classList.add("_error");
+  }
+
+function formRemoveError(input){
+  input.parentElement.classList.remove("_error");
+  input.classList.remove("_error")
+}
+
+function emailCheck(input){
+  return !reg.test(input.value);
+}
+
+}
+)

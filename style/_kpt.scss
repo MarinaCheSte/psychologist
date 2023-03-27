@@ -4,6 +4,9 @@
 
 .kpt-headline {
   font-size: 30px;
+  @media (max-width: 280px) {
+    font-size: 26px;
+  }
 }
 
 .kpt-info {

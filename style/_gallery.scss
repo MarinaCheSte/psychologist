@@ -17,6 +17,9 @@
   font-size: 30px;
   font-weight: bolder;
   padding-top: 80px;
+  @media (max-width: 280px) {
+    font-size: 26px;
+  }
 }
 
 .gallery-image {
