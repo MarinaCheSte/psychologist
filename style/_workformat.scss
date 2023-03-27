@@ -1,0 +1,78 @@
+.workformat-section {
+  background-color: $light-color;
+  height: fit-content;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.workformat-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workformat-headline {
+  font-size: 30px;
+  padding-bottom: 30px;
+  @media (max-width: 280px) {
+    font-size: 26px;
+  }
+}
+
+.workformat__format {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: solid $primary-color 5px;
+  margin-bottom: 30px;
+  z-index: 2;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+
+.two-column-workformat {
+  display: flex;
+  flex-direction: column;
+}
+
+.format-headline {
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.format-text {
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 600;
+  width: 70%;
+  padding-left: 15px;
+  background-color: $format-text-color;
+  @media (max-width: 800px) {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+._animated-text {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._active._animated-text,
+._animated-text._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.4s;
+}
+
+.headline-wrapper {
+  width: 30%;
+  background-color: $primary-color;
+  border: solid $primary-color 2px;
+  @media (max-width: 800px) {
+    width: 100%;
+    padding: 10px;
+  }
+}

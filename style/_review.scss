@@ -1,0 +1,21 @@
+.review-link {
+  border-bottom: solid $hover-text-color 3px;
+}
+
+.review-link:hover {
+  color: $hover-text-color;
+}
+
+.review-text {
+  font-size: 20px;
+  font-weight: 900;
+  padding: 30px;
+  line-height: 2;
+}
+
+.review-wrapper {
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
